@@ -12,7 +12,7 @@
 <div class="container">
         <div class="row">
             <div class="col-6">
-                <form action="usuarios.php" method="POST">
+                <form action="vista_post.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="name_form_user">Nombre</label>
@@ -37,31 +37,29 @@
                                 <option value="3">CE</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                        <label for="numdoc_form_user">Numero de documento</label>
+                        <input type="number" class="form-control" id="numdoc_form_user" name="numdoc_form_user">
+                    
+                    <button type="submit" class="btn btn-primary">Enviar datos</button>
+                </form>
+                <form action="vista_get.php" method="GET">
+                </div>
                         <div class="form-group col-md-4">
-                            <label for="rol_form_user">Rol usuario</label>
-                            <select id="rol_form_user" name="rol_form_user" class="form-control">
-                                <option disabled selected value="">Seleccione uno...</option>
-                                <?php
-                                //FORMA 3.1
-                                foreach ($roles as $data_rol) {
-                                    ?>
-                                    <option value="<?php echo $data_rol['id_rol'] ?>"><?php echo $data_rol['nombre'] ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
+                            <label for="asunto_form_user">Asunto</label>
+                            <input type="text" name="asunto_form_user" class="form-control" id="asunto_form_user">
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="tyc_form_user" id="tyc_form_user">
-                            <label class="form-check-label" for="tyc_form_user">
-                                Acepta terminos y condiciones
-                            </label>
+                    <div class="form-group col-md-4">
+                            <label for="mensaje_form_user">Mensaje</label>
+                            <input type="text" name="mensaje_form_user" class="form-control" id="mensaje_form_user">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar datos</button>
+                    <button type="submit" class="btn btn-primary">Enviar menjase</button>
                 </form>
+
+                
             </div>
         </div>
     </div>
