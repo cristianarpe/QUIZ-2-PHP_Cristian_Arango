@@ -1,0 +1,2 @@
+<?php
+//CONECTA TU BASE DATOS
